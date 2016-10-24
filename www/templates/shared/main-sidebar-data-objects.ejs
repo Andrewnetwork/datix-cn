@@ -1,0 +1,25 @@
+<li class="<%= node === 'dataobjects' ? 'active' : ''  %> treeview">
+  <a href="#">
+    <i class="fa fa-table"></i> <span>Data Objects</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li class="<%= leaf === 'browser' ? 'active' : ''  %>">
+      <a href="/dataobjects/browser"><i class="fa fa-circle-o"></i> Data Browser</a>
+    </li>
+    <li class="<%= leaf === 'csv' ? 'active' : ''  %>">
+      <a href="/dataobjects/csv"><i class="fa fa-circle-o"></i> CSV Documents</a>
+    </li>
+    <li class="<%= leaf === 'pdf' ? 'active' : ''  %>">
+      <a href="/dataobjects/pdf"><i class="fa fa-circle-o"></i> PDF Documents</a>
+    </li>
+    <li class="<%= leaf === 'excel' ? 'active' : ''  %>">
+      <a href="/dataobjects/excel"><i class="fa fa-circle-o"></i> Excel Documents</a>
+    </li>
+    <li class="<%= leaf === 'word' ? 'active' : ''  %>">
+      <a href="/dataobjects/word"><i class="fa fa-circle-o"></i> Word Documents</a>
+    </li>
+  </ul>
+</li>

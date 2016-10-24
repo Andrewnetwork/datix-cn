@@ -1,0 +1,22 @@
+<li class="<%= node === 'datajobs' ? 'active' : ''  %> treeview">
+  <a href="#">
+    <i class="fa fa-hourglass-half"></i> <span>Data Jobs</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li class="<%= leaf === 'browser' ? 'active' : ''  %>">
+      <a href="/datajobs/browser"><i class="fa fa-circle-o"></i> Job Browser</a>
+    </li>
+    <li class="<%= leaf === 'phantomcap' ? 'active' : ''  %>">
+      <a href="/datajobs/phantomcap"><i class="fa fa-circle-o"></i> Phantom Capture</a>
+    </li>
+    <li class="<%= leaf === 'opencvext' ? 'active' : ''  %>">
+      <a href="/datajobs/opencvext"><i class="fa fa-circle-o"></i> OpenCV Extraction</a>
+    </li>
+    <li class="<%= leaf === 'etl' ? 'active' : ''  %>">
+      <a href="/datajobs/etl"><i class="fa fa-circle-o"></i> ETL</a>
+    </li>
+  </ul>
+</li>

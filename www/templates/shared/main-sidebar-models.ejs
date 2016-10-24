@@ -1,0 +1,19 @@
+<li class="<%= node === 'statmodels' ? 'active' : ''  %> treeview">
+  <a href="#">
+    <i class="fa fa-rocket"></i> <span>Models</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li class="<%= leaf === 'browser' ? 'active' : ''  %>">
+      <a href="/statmodels/browser"><i class="fa fa-circle-o"></i> Model Browser</a>
+    </li>
+    <li class="<%= leaf === 'training' ? 'active' : ''  %>">
+      <a href="/statmodels/training"><i class="fa fa-circle-o"></i> In Training</a>
+    </li>
+    <li class="<%= leaf === 'metrics' ? 'active' : ''  %>">
+      <a href="/statmodels/metrics"><i class="fa fa-circle-o"></i> Metrics</a>
+    </li>
+  </ul>
+</li>

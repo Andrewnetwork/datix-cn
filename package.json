@@ -17,16 +17,14 @@
       "command": "node ./bin/server.js",
       "env": {
         "NODE_ENV": "production",
-        "PORT": 8080,
-        "WITH_RED": true
+        "PORT": 8080
       }
     },
     "start-dev": {
       "command": "nodemon -e js,jsx,json -w server.js -i src/client -x node ./bin/server.js",
       "env": {
         "NODE_ENV": "development",
-        "PORT": 8080,
-        "WITH_RED": true
+        "PORT": 8080
       }
     }
   },

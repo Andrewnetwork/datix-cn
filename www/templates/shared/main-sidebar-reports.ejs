@@ -1,0 +1,23 @@
+<li class="<%= node === 'reports' ? 'active' : ''  %> treeview">
+  <a href="#">
+    <i class="fa fa-files-o"></i>
+    <span>Reports</span>
+    <span class="pull-right-container">
+      <span class="label label-primary pull-right">4</span>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li class="<%= leaf === 'quarterlysales' ? 'active' : ''  %>">
+      <a href="/reports/quarterlysales"><i class="fa fa-circle-o"></i> Quarterly Sales</a>
+    </li>
+    <li class="<%= leaf === 'balancesheet' ? 'active' : ''  %>">
+      <a href="/reports/balancesheet"><i class="fa fa-circle-o"></i> Balance Sheet</a>
+    </li>
+    <li class="<%= leaf === 'prospects' ? 'active' : ''  %>">
+      <a href="/reports/prospects"><i class="fa fa-circle-o"></i> Job Prospects</a>
+    </li>
+    <li class="<%= leaf === 'infrastructure' ? 'active' : ''  %>">
+      <a href="/reports/infrastructure"><i class="fa fa-circle-o"></i> Infrastructure</a>
+    </li>
+  </ul>
+</li>

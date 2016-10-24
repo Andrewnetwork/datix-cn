@@ -1,0 +1,23 @@
+<li class="<%= node === 'resources' ? 'active' : ''  %> treeview">
+  <a href="#">
+    <i class="fa fa-pie-chart"></i>
+    <span>Resources</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li class="<%= leaf === 'cash' ? 'active' : ''  %>">
+      <a href="/resources/cash"><i class="fa fa-circle-o"></i> Cash (and Equivalent)</a>
+    </li>
+    <li class="<%= leaf === 'stocks' ? 'active' : ''  %>">
+      <a href="/resources/stocks"><i class="fa fa-circle-o"></i> Stocks</a>
+    </li>
+    <li class="<%= leaf === 'bonds' ? 'active' : ''  %>">
+      <a href="/resources/bonds"><i class="fa fa-circle-o"></i> Bonds</a>
+    </li>
+    <li class="<%= leaf === 'other' ? 'active' : ''  %>">
+      <a href="/resources/other"><i class="fa fa-circle-o"></i> Other</a>
+    </li>
+  </ul>
+</li>

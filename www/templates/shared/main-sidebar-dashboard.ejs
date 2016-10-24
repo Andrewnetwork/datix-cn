@@ -1,14 +1,22 @@
-<li class="active treeview">
+<li class="<%= node === 'dashboard' ? 'active' : ''  %> treeview">
   <a href="#">
-    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+    <i class="fa fa-dashboard"></i> <span> Dashboard</span>
     <span class="pull-right-container">
       <i class="fa fa-angle-left pull-right"></i>
     </span>
   </a>
   <ul class="treeview-menu"> <!-- has menu-open -->
-    <li class="active"><a href="/"><i class="fa fa-circle-o"></i> Overview</a></li>
-    <li><a href="/cvstream"><i class="fa fa-circle-o"></i> Pending Model Training</a></li>
-    <li><a href="#"><i class="fa fa-circle-o"></i> Balance Sheet</a></li>
-    <li><a href="/blank"><i class="fa fa-circle-o"></i> Personal</a></li>
+    <li class="<%= leaf === 'overview' ? 'active' : ''  %>">
+      <a href="/"><i class="fa fa-circle-o"></i> Overview</a>
+    </li>
+    <li class="<%= leaf === 'kb' ? 'active' : ''  %>">
+      <a href="/dashboard/kb"><i class="fa fa-circle-o"></i> Knowledge Base</a>
+    </li>
+    <li class="<%= leaf === 'cv' ? 'active' : ''  %>">
+      <a href="/dashboard/cv"><i class="fa fa-circle-o"></i> CV</a>
+    </li>
+    <li class="<%= leaf === 'about' ? 'active' : ''  %>">
+      <a href="/dashboard/about"><i class="fa fa-circle-o"></i> About</a>
+    </li>
   </ul>
 </li>

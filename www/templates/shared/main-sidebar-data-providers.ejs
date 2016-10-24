@@ -1,0 +1,22 @@
+<li class="<%= node === 'serviceproviders' ? 'active' : ''  %> treeview">
+  <a href="#">
+    <i class="fa fa-hourglass-half"></i> <span>Service Providers</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li class="<%= leaf === 'stripe' ? 'active' : ''  %>">
+      <a href="/serviceproviders/stripe"><i class="fa fa-circle-o"></i> Stripe</a>
+    </li>
+    <li class="<%= leaf === 'dropbox' ? 'active' : ''  %>">
+      <a href="/serviceproviders/dropbox"><i class="fa fa-circle-o"></i> Dropbox</a>
+    </li>
+    <li class="<%= leaf === 'tableau' ? 'active' : ''  %>">
+      <a href="/serviceproviders/tableau"><i class="fa fa-circle-o"></i> Tableau</a>
+    </li>
+    <li class="<%= leaf === 'quickbooks' ? 'active' : ''  %>">
+      <a href="/serviceproviders/quickbooks"><i class="fa fa-circle-o"></i> Quickbooks</a>
+    </li>
+  </ul>
+</li>
