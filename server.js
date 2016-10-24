@@ -131,7 +131,6 @@ io.on('connection', function(client){
 /**
  * initialize node red
  */
- /*
 var settings = {
     httpAdminRoot:'/red',
     httpNodeRoot: '/redapi',
@@ -146,7 +145,7 @@ app.use(settings.httpAdminRoot,RED.httpAdmin);
 app.use(settings.httpNodeRoot,RED.httpNode);
 
 RED.start();
-*/
+
 
 /**
  * start server

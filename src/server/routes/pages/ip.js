@@ -7,7 +7,7 @@ router.get('/browser', (req, res) => {
 });
 
 router.get('/nodered', (req, res) => {
-  res.render('under-construction.ejs',{node: 'ip', leaf: 'nodered'});
+  res.redirect('/red');
 });
 
 router.get('/source', (req, res) => {
