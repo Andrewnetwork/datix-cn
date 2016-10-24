@@ -59,22 +59,25 @@ io.on('connection', function(client){
   });
 });
 
-//if (config.WITH_RED) {
-  var settings = {
-      httpAdminRoot:'/red',
-      httpNodeRoot: '/redapi',
-      userDir: path.join(_getUserHome(), '.node-red'),
-      functionGlobalContext: { }
-  };
 
-  RED.init(server,settings);
+/**
+ * initialize node red
+ */
+var settings = {
+    httpAdminRoot:'/red',
+    httpNodeRoot: '/redapi',
+    userDir: path.join(_getUserHome(), '.node-red'),
+    functionGlobalContext: { }
+};
 
-  app.use(settings.httpAdminRoot,RED.httpAdmin);
+RED.init(server,settings);
 
-  app.use(settings.httpNodeRoot,RED.httpNode);
+app.use(settings.httpAdminRoot,RED.httpAdmin);
 
-  RED.start();
-//}
+app.use(settings.httpNodeRoot,RED.httpNode);
+
+RED.start();
+
 
 /**
  * start server
