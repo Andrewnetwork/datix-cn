@@ -5,6 +5,17 @@ import config from './config';
 import httpProxy from 'http-proxy';
 import RED from 'node-red';
 import ioCtor from 'socket.io';
+import * as routeDashboard from './src/server/routes/pages/dashboard';
+import * as routeCalendar from './src/server/routes/pages/calendar';
+import * as routeMessages from './src/server/routes/pages/messages';
+import * as routeReports from './src/server/routes/pages/reports';
+import * as routeResources from './src/server/routes/pages/resources';
+import * as routeIP from './src/server/routes/pages/ip';
+import * as routeCompute from './src/server/routes/pages/compute';
+import * as routeDataObjects from './src/server/routes/pages/data_objects';
+import * as routeDataJobs from './src/server/routes/pages/data_jobs';
+import * as routeStatModels from './src/server/routes/pages/stat_models';
+import * as routeDocumentation from './src/server/routes/pages/documentation';
 
 /**
  * get home dir
@@ -33,12 +44,69 @@ app.set('views', 'www/templates');
 app.use(express.static('www/public'));
 
 
+
 /**
  * render index.ejs
  */
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {node: 'dashboard', leaf: 'overview'});
 });
+
+/**
+ * dashboard menu item
+ */
+app.use('/dashboard', routeDashboard.router);
+
+/**
+ * calendar menu item
+ */
+app.use('/calendar', routeCalendar.router);
+
+/**
+ * messages menu item
+ */
+app.use('/messages', routeMessages.router);
+
+/**
+ * reports menu item
+ */
+app.use('/reports', routeReports.router);
+
+/**
+ * resources menu item
+ */
+app.use('/resources', routeResources.router);
+
+/**
+ * compute menu item
+ */
+app.use('/compute', routeCompute.router);
+
+/**
+ * ip menu item
+ */
+app.use('/ip', routeIP.router);
+
+/**
+ * data object menu item
+ */
+app.use('/dataobjects', routeDataObjects.router);
+
+/**
+ * data job menu item
+ */
+app.use('/datajobs', routeDataJobs.router);
+
+/**
+ * stat model menu item
+ */
+app.use('/statmodels', routeStatModels.router);
+
+/**
+ * documentation menu item
+ */
+app.use('/documentation', routeDocumentation.router);
+
 
 app.get('/blank', (req, res) => {
   res.render('blank');
