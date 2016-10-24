@@ -8,7 +8,7 @@
     <!-- START: Sidebar user panel -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="dist/img/me-160x160.jpg" class="img-circle" alt="User Image">
+        <img src="/dist/img/me-160x160.jpg" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
         <p>Michael Rogowski</p>
@@ -36,169 +36,51 @@
       <li class="header">MAIN MENU</li>
 
       <!-- DASHBOARD NODE -->
-      <%- include('main-sidebar-dashboard') %>
+      <%- include('main-sidebar-dashboard', { node: node, leaf: leaf }) %>
       <!-- END: DASHBOARD NODE -->
 
 
       <!-- START: CALENDAR -->
-      <li>
-        <a href="pages/calendar.html">
-          <i class="fa fa-calendar"></i> <span>Calendar</span>
-          <span class="pull-right-container">
-            <small class="label pull-right bg-red">3</small>
-            <small class="label pull-right bg-blue">17</small>
-          </span>
-        </a>
-      </li>
+      <%- include('main-sidebar-calendar', { node: node, leaf: leaf }) %>
       <!-- END: CALENDAR -->
 
 
       <!-- START: MESSAGE CENTER -->
-      <li>
-        <a href="pages/mailbox/mailbox.html">
-          <i class="fa fa-envelope"></i> <span>Messages</span>
-          <span class="pull-right-container">
-            <small class="label pull-right bg-yellow">12</small>
-            <small class="label pull-right bg-green">16</small>
-            <small class="label pull-right bg-red">5</small>
-          </span>
-        </a>
-      </li>
+      <%- include('main-sidebar-messages', { node: node, leaf: leaf }) %>
       <!-- END: MESSAGE CENTER -->
 
 
       <!-- START: REPORTS -->
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-files-o"></i>
-          <span>Reports</span>
-          <span class="pull-right-container">
-            <span class="label label-primary pull-right">4</span>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-          <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-          <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-          <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-        </ul>
-      </li>
+      <%- include('main-sidebar-reports', { node: node, leaf: leaf }) %>
       <!-- END: REPORTS -->
 
 
       <!-- START: RESOURCES -->
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-pie-chart"></i>
-          <span>Resources</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Cash (and Equivalent)</a></li>
-          <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> CV</a></li>
-          <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Knowledge Base</a></li>
-          <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Stocks</a></li>
-          <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Bonds</a></li>
-          <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Other</a></li>
-        </ul>
-      </li>
+      <%- include('main-sidebar-resources', { node: node, leaf: leaf }) %>
       <!-- END: RESOURCES -->
 
 
       <!-- START: Compute -->
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-laptop"></i>
-          <span>Compute</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-          <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-          <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-          <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-          <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-          <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-        </ul>
-      </li>
+      <%- include('main-sidebar-compute', { node: node, leaf: leaf }) %>
       <!-- END: COMPUTE -->
 
       <!-- IP -->
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-edit"></i> <span>IP</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> IP Browser</a></li>
-          <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Flow Editor</a></li>
-          <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Development</a></li>
-        </ul>
-      </li>
+      <%- include('main-sidebar-ip', { node: node, leaf: leaf }) %>
       <!-- END: IP -->
 
 
       <!-- DATA OBJECTS -->
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-table"></i> <span>Data Objects</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Data Browser</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Csv</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> PDF</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Excel</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Word</a></li>
-        </ul>
-      </li>
+      <%- include('main-sidebar-data-objects', { node: node, leaf: leaf }) %>
       <!-- END: DATA OBJECTS -->
 
 
       <!-- DATA JOBS -->
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-hourglass-half"></i> <span>Data Jobs</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Data Browser</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Csv</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> PDF</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Excel</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Word</a></li>
-        </ul>
-      </li>
+      <%- include('main-sidebar-data-jobs', { node: node, leaf: leaf }) %>
       <!-- END: DATA JOBS -->
-
-      <!-- START: WIDGETS -->
-      <li>
-        <a href="pages/widgets.html">
-          <i class="fa fa-th"></i> <span>Widgets</span>
-          <span class="pull-right-container">
-            <small class="label pull-right bg-green">new</small>
-          </span>
-        </a>
-      </li>
-      <!-- END: WIDGETS -->
 
 
       <!-- START: HELP DOCS -->
-      <li>
-        <a href="documentation/index.html">
-          <i class="fa fa-book"></i> <span>Documentation</span>
-        </a>
-      </li>
+      <%- include('main-sidebar-documentation', { node: node, leaf: leaf }) %>
       <!-- END: HELP DOCS -->
 
     </ul>

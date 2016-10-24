@@ -1,0 +1,19 @@
+<li class="<%= node === 'media' ? 'active' : ''  %> treeview">
+  <a href="#">
+    <i class="fa fa-camera"></i> <span>Media</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li class="<%= leaf === 'browser' ? 'active' : ''  %>">
+      <a href="/media/browser"><i class="fa fa-circle-o"></i> Media Browser</a>
+    </li>
+    <li class="<%= leaf === 'image' ? 'active' : ''  %>">
+      <a href="/media/image"><i class="fa fa-circle-o"></i> Image</a>
+    </li>
+    <li class="<%= leaf === 'video' ? 'active' : ''  %>">
+      <a href="/media/video"><i class="fa fa-circle-o"></i> Video</a>
+    </li>
+  </ul>
+</li>

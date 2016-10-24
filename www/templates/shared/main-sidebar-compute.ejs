@@ -1,0 +1,28 @@
+<li class="<%= node === 'compute' ? 'active' : ''  %> treeview">
+  <a href="#">
+    <i class="fa fa-laptop"></i> <span> Compute</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu"> <!-- has menu-open -->
+    <li class="<%= leaf === 'local' ? 'active' : ''  %>">
+      <a href="/compute/local"><i class="fa fa-circle-o"></i> Local</a>
+    </li>
+    <li class="<%= leaf === 'aws' ? 'active' : ''  %>">
+      <a href="/compute/aws"><i class="fa fa-circle-o"></i> AWS</a>
+    </li>
+    <li class="<%= leaf === 'azure' ? 'active' : ''  %>">
+      <a href="/compute/azure"><i class="fa fa-circle-o"></i> Azure</a>
+    </li>
+    <li class="<%= leaf === 'do' ? 'active' : ''  %>">
+      <a href="/compute/do"><i class="fa fa-circle-o"></i> Digital Ocean</a>
+    </li>
+    <li class="<%= leaf === 'gcp' ? 'active' : ''  %>">
+      <a href="/compute/gcp"><i class="fa fa-circle-o"></i> GCP</a>
+    </li>
+    <li class="<%= leaf === 'linode' ? 'active' : ''  %>">
+      <a href="/compute/linode"><i class="fa fa-circle-o"></i> Linode</a>
+    </li>
+  </ul>
+</li>

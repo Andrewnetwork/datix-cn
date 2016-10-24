@@ -1,0 +1,19 @@
+<li class="<%= node === 'ip' ? 'active' : ''  %> treeview">
+  <a href="#">
+    <i class="fa fa-edit"></i> <span>IP</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li class="<%= leaf === 'browser' ? 'active' : ''  %>">
+      <a href="/ip/browser"><i class="fa fa-circle-o"></i> IP Browser</a>
+    </li>
+    <li class="<%= leaf === 'nodered' ? 'active' : ''  %>">
+      <a href="/ip/nodered"><i class="fa fa-circle-o"></i> node-RED Flow</a>
+    </li>
+    <li class="<%= leaf === 'source' ? 'active' : ''  %>">
+      <a href="/ip/source"><i class="fa fa-circle-o"></i> Source Code</a>
+    </li>
+  </ul>
+</li>
