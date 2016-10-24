@@ -1,6 +1,15 @@
 # INSTALLING
 
-TODO
+* be sure to fork it
+* clone your fork
+* cd into your clone
+* run 'npm install'
+   * 148 Mb install
+* run 'npm run start-dev'
+
+# NOTES
+
+* click on menu item IP -> node-RED flow to navigate to nodes console
 
 # INFO
 
